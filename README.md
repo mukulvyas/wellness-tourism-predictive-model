@@ -13,8 +13,9 @@ To build a predictive model that determines the likelihood of a customer purchas
 ## 🗃️ Dataset
 
 - **Source**: [Kaggle - Holiday Package Purchase Prediction](https://www.kaggle.com/datasets/susant4learning/holiday-package-purchase-prediction/data)
-- **Rows**: 4888
-- **Columns**: 20 (Customer demographics, behavior, and interactional data)
+- **Rows**: 4888  
+- **Columns**: 20  
+- Customer demographics, behavior, and interactional data were used.
 
 ---
 
@@ -22,29 +23,38 @@ To build a predictive model that determines the likelihood of a customer purchas
 
 - Handled missing values and duplicates
 - Converted data types where required
-- Applied label encoding and one-hot encoding
-- Performed feature selection
+- Applied encoding techniques for categorical features
 - Train-test split (80-20)
 
 ---
 
 ## 📊 Exploratory Data Analysis (EDA)
 
-- Visualized distributions of age, salary range, marital status, etc.
+- Visualized age, salary range, marital status, etc.
 - Checked balance of the target variable
-- Explored feature importance with respect to the target
+- Explored relationships and correlations
 
 ---
 
-## 🤖 Model Used
+## 🤖 Models Evaluated
 
-Used a **Random Forest Classifier**, which achieved approximately **93% accuracy** in predicting package purchases.
+- Random Forest
+- AdaBoost
+- Gradient Boosting
+- XGBoost
 
 ---
 
-## 🏁 Conclusion
+## 🏁 Final Results
 
-The model helps identify potential buyers with high accuracy, enabling better customer targeting and reduced marketing costs.
+| Model              | Accuracy | Recall  | Precision | F1 Score | ROC AUC |
+|--------------------|----------|---------|-----------|----------|---------|
+| Random Forest      | 93.25%   | 67.54%  | 96.99%    | 92.77%   | 83.52%  |
+| AdaBoost           | 83.64%   | 22.51%  | 78.18%    | 79.77%   | 60.49%  |
+| Gradient Boosting  | 95.60%   | 79.58%  | 97.44%    | 95.43%   | 89.54%  |
+| XGBoost            | 95.19%   | 78.53%  | 96.15%    | 95.00%   | 88.89%  |
+
+**Best Model: Gradient Boosting**, offering the highest overall performance in terms of accuracy and F1 score.
 
 ---
 
@@ -53,7 +63,7 @@ The model helps identify potential buyers with high accuracy, enabling better cu
 - Python
 - Pandas, NumPy
 - Scikit-Learn
-- Seaborn, Matplotlib
+- XGBoost, Seaborn, Matplotlib
 
 ---
 
@@ -63,14 +73,13 @@ The model helps identify potential buyers with high accuracy, enabling better cu
 📦Wellness_Tourism_Model
  ┣ 📜Wellness_Tourism_Model.ipynb
  ┣ 📜README.md
+ ┗ 📜Travel.csv
 ```
 
 ---
 
 ## 💡 Future Improvements
 
-- Try other models like XGBoost or Logistic Regression for comparison
-- Apply hyperparameter tuning (GridSearchCV, RandomizedSearchCV)
-- Build a Streamlit or Flask dashboard for demo deployment
-
-
+- Perform advanced feature engineering
+- Deploy the model using Streamlit or Flask
+- Integrate it with a CRM system for real-time predictions
